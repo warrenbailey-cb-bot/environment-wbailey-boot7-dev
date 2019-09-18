@@ -49,7 +49,7 @@ ingress:
     enabled: false
     production: false
 kaniko: true
-secretStorage: local
+secretStorage: vault
 storage:
   backup:
     enabled: false
