@@ -13,41 +13,42 @@ cluster:
   zone: europe-west2-c
 environments:
 - ingress:
-    domain: ""
-    externalDNS: false
-    namespaceSubDomain: ""
+    domain: github.app.warrenbailey.jenkins-x.rocks
+    externalDNS: true
+    namespaceSubDomain: dev
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: wbailey@cloudbees.com
+      enabled: true
+      production: true
   key: dev
 - ingress:
-    domain: ""
-    externalDNS: false
-    namespaceSubDomain: ""
+    domain: github.app.warrenbailey.jenkins-x.rocks
+    externalDNS: true
+    namespaceSubDomain: -staging
     tls:
-      email: ""
+      email: wbailey@cloudbees.com
       enabled: false
       production: false
   key: staging
 - ingress:
-    domain: ""
-    externalDNS: false
-    namespaceSubDomain: ""
+    domain: github.app.warrenbailey.jenkins-x.rocks
+    externalDNS: true
+    namespaceSubDomain: -prod
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: wbailey@cloudbees.com
+      enabled: true
+      production: true
   key: production
 gitops: true
 ingress:
-  domain: 35.246.11.157.nip.io
-  externalDNS: false
+  cloud_dns_secret_name: external-dns-gcp-sa
+  domain: github.app.warrenbailey.jenkins-x.rocks
+  externalDNS: true
   namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: wbailey@cloudbees.com
+    enabled: true
+    production: true
 kaniko: true
 secretStorage: vault
 storage:
